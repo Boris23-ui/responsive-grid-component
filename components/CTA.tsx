@@ -37,7 +37,7 @@ const CTA = () => {
           per month
         </span>
       </Typography>
-      <Typography>
+      <Typography sx={{ color: "#FFFFFF" }}>
         Full access for less than $1 a day
       </Typography>
       <Button 
@@ -51,7 +51,7 @@ const CTA = () => {
             padding: "1rem"
             }} 
              >
-        SIGN UP
+        Sign Up
       </Button>
     </Box>
   );
