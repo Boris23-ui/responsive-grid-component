@@ -1,16 +1,25 @@
+"use client"
+
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 const CTA = () => {
+  const mobile = useMediaQuery("(max-width:600px)")
+  
   return (
-    <Box sx={{ padding: "2.5rem", backgroundColor: "#2AB3B1" }}>
+    <Box sx={{ 
+      padding: mobile ? "2rem" : "2.5rem", 
+      backgroundColor: "#2AB3B1",
+      height: "100%"
+    }}>
       <Typography 
         sx={{ 
           color: 'white', 
-          fontSize: "1.125rem", 
+          fontSize: mobile ? "1rem" : "1.125rem", 
           fontWeight: 600
         }}
       >
@@ -43,14 +52,15 @@ const CTA = () => {
       <Button 
         sx={{ 
             marginTop: "1.5rem",
+            marginBottom: mobile ? "1rem" : "1.5rem",
             backgroundColor: "#C0DF33",
             color: "#FFFFFF",
             width: "100%",
             textTransform: "none",
             fontWeight: 800,
             padding: "1rem"
-            }} 
-             >
+        }} 
+      >
         Sign Up
       </Button>
     </Box>
